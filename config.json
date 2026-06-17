@@ -1,6 +1,6 @@
 {
   "ollama_host": "http://localhost:11434",
-  "models": [],
+  "models": ["qwen2.5-coder:1.5b"],
   "n_samples": 1,
   "temperature": 0.0,
   "test_timeout_seconds": 10,
