@@ -1,0 +1,9 @@
+{
+  "id": "bug_19_wrong_index",
+  "title": "Dot product uses the wrong vector",
+  "category": "loop variable usage",
+  "difficulty": "medium",
+  "description": "dot_product(a, b) should sum a[i] * b[i] for each index i.",
+  "bug_summary": "Multiplies a[i] * a[i] instead of a[i] * b[i], ignoring the second vector.",
+  "entry_point": "dot_product"
+}

@@ -1,0 +1,8 @@
+{
+  "ollama_host": "http://localhost:11434",
+  "models": [],
+  "n_samples": 1,
+  "temperature": 0.0,
+  "test_timeout_seconds": 10,
+  "request_timeout_seconds": 120
+}

@@ -1,0 +1,9 @@
+{
+  "id": "bug_17_operator_precedence",
+  "title": "Average missing parentheses around the sum",
+  "category": "operator precedence",
+  "difficulty": "medium",
+  "description": "average_of_three(a, b, c) should return (a + b + c) / 3.",
+  "bug_summary": "Missing parentheses: 'a + b + c / 3' divides only c by 3 before adding.",
+  "entry_point": "average_of_three"
+}

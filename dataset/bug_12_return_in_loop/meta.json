@@ -1,0 +1,9 @@
+{
+  "id": "bug_12_return_in_loop",
+  "title": "Premature return inside the loop",
+  "category": "return inside loop",
+  "difficulty": "medium",
+  "description": "has_negative(nums) should check all elements before concluding.",
+  "bug_summary": "The 'else: return False' returns on the very first iteration, without checking the rest of the list.",
+  "entry_point": "has_negative"
+}

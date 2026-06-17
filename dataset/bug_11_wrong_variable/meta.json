@@ -1,0 +1,9 @@
+{
+  "id": "bug_11_wrong_variable",
+  "title": "Returns the loop variable instead of the accumulator",
+  "category": "scope/wrong variable",
+  "difficulty": "medium",
+  "description": "max_in_list(nums) should return the largest value in the list.",
+  "bug_summary": "Returns 'n' (last iterated value) instead of 'result' (the accumulated maximum).",
+  "entry_point": "max_in_list"
+}

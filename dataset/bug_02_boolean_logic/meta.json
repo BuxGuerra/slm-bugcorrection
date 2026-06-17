@@ -1,0 +1,9 @@
+{
+  "id": "bug_02_boolean_logic",
+  "title": "Age validation is always true",
+  "category": "boolean logic",
+  "difficulty": "easy",
+  "description": "is_valid_age(age) should return True only for ages between 0 and 120 inclusive.",
+  "bug_summary": "Uses 'or' instead of 'and', so the expression is always True.",
+  "entry_point": "is_valid_age"
+}

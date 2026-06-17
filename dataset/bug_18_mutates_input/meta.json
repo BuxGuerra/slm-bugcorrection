@@ -1,0 +1,9 @@
+{
+  "id": "bug_18_mutates_input",
+  "title": "Function modifies the input list",
+  "category": "copy vs reference",
+  "difficulty": "medium",
+  "description": "with_sum(nums) should return a new list with the sum at the end, without altering the original.",
+  "bug_summary": "Calls nums.append(...) directly on the received list, mutating the caller's input.",
+  "entry_point": "with_sum"
+}

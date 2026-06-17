@@ -1,0 +1,9 @@
+{
+  "id": "bug_05_mutable_default",
+  "title": "Mutable default argument accumulates across calls",
+  "category": "mutable default argument",
+  "difficulty": "medium",
+  "description": "append_item(item) should return a new list with only the item; calls are independent.",
+  "bug_summary": "acc=[] is evaluated once at definition time and shared across all calls.",
+  "entry_point": "append_item"
+}

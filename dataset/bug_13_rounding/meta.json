@@ -1,0 +1,9 @@
+{
+  "id": "bug_13_rounding",
+  "title": "Truncation instead of rounding",
+  "category": "floating point/rounding",
+  "difficulty": "easy",
+  "description": "round_price(value) should round to the nearest integer.",
+  "bug_summary": "int(value) truncates toward zero instead of rounding (round).",
+  "entry_point": "round_price"
+}

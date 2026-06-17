@@ -1,0 +1,9 @@
+{
+  "id": "bug_14_none_handling",
+  "title": "Length does not handle None input",
+  "category": "None handling",
+  "difficulty": "easy",
+  "description": "safe_length(s) should return len(s), or 0 when s is None.",
+  "bug_summary": "Calls len(None) directly, causing a TypeError; missing an 's is None' check.",
+  "entry_point": "safe_length"
+}

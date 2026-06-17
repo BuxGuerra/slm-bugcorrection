@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+# arquivo-alvo temporário criado durante a avaliação/validação
+dataset/*/solution.py
+# resultados das execuções de avaliação
+results/

@@ -1,0 +1,9 @@
+{
+  "id": "bug_01_off_by_one",
+  "title": "Range sum excludes the last element",
+  "category": "off-by-one",
+  "difficulty": "easy",
+  "description": "sum_range(n) should sum all integers from 1 to n inclusive.",
+  "bug_summary": "range(1, n) excludes n; it should be range(1, n + 1).",
+  "entry_point": "sum_range"
+}

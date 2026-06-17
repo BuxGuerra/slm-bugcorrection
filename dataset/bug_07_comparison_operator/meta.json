@@ -1,0 +1,9 @@
+{
+  "id": "bug_07_comparison_operator",
+  "title": "Passing count ignores the cutoff score",
+  "category": "comparison operator",
+  "difficulty": "medium",
+  "description": "count_passing(scores, threshold) should count scores greater than OR EQUAL to the threshold.",
+  "bug_summary": "Uses '>' instead of '>=', excluding those who scored exactly the cutoff.",
+  "entry_point": "count_passing"
+}

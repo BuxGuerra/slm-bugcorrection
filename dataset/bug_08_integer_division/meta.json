@@ -1,0 +1,9 @@
+{
+  "id": "bug_08_integer_division",
+  "title": "Division returns float instead of integer",
+  "category": "integer division",
+  "difficulty": "medium",
+  "description": "split_evenly(total, people) should return the integer part of the division (floor).",
+  "bug_summary": "Uses '/' (true division) instead of '//' (integer division).",
+  "entry_point": "split_evenly"
+}

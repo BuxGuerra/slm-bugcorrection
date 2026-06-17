@@ -1,0 +1,9 @@
+{
+  "id": "bug_06_recursion_base",
+  "title": "Factorial without base case",
+  "category": "recursion base case",
+  "difficulty": "hard",
+  "description": "factorial(n) should return n! for n >= 0, with factorial(0) == 1.",
+  "bug_summary": "Missing the base case (n <= 1), causing infinite recursion (RecursionError).",
+  "entry_point": "factorial"
+}

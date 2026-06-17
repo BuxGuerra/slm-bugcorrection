@@ -1,0 +1,9 @@
+{
+  "id": "bug_04_index_error",
+  "title": "Last-element access with out-of-range index",
+  "category": "list index",
+  "difficulty": "easy",
+  "description": "get_last(lst) should return the last element of the list.",
+  "bug_summary": "Uses lst[len(lst)], which is always out of range (IndexError).",
+  "entry_point": "get_last"
+}

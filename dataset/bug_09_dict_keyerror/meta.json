@@ -1,0 +1,9 @@
+{
+  "id": "bug_09_dict_keyerror",
+  "title": "Dictionary access without handling missing key",
+  "category": "dict KeyError",
+  "difficulty": "easy",
+  "description": "get_count(counts, key) should return the count or 0 when the key does not exist.",
+  "bug_summary": "Uses counts[key], which raises KeyError for missing keys; it should use .get(key, 0).",
+  "entry_point": "get_count"
+}

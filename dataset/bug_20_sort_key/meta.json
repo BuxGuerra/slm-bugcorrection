@@ -1,0 +1,9 @@
+{
+  "id": "bug_20_sort_key",
+  "title": "Sort by length without key",
+  "category": "sort key",
+  "difficulty": "easy",
+  "description": "sort_by_length(words) should sort the words by ascending length.",
+  "bug_summary": "sorted(words) sorts alphabetically; missing key=len to sort by size.",
+  "entry_point": "sort_by_length"
+}

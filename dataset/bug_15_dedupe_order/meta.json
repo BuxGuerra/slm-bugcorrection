@@ -1,0 +1,9 @@
+{
+  "id": "bug_15_dedupe_order",
+  "title": "Deduplication loses the order",
+  "category": "dedupe set vs list",
+  "difficulty": "hard",
+  "description": "unique(lst) should remove duplicates while preserving the order of first occurrence.",
+  "bug_summary": "list(set(lst)) discards the original element order.",
+  "entry_point": "unique"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "bug_16_swallowed_exception",
+  "title": "Silently swallowed exception",
+  "category": "swallowed exception",
+  "difficulty": "hard",
+  "description": "get_value(d, key) should return d[key] and propagate KeyError when the key does not exist.",
+  "bug_summary": "try/except Exception: pass masks the KeyError and silently returns None.",
+  "entry_point": "get_value"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "bug_10_string_slicing",
+  "title": "Removes the first character instead of the last",
+  "category": "string slicing",
+  "difficulty": "easy",
+  "description": "remove_last_char(s) should return the string without the last character.",
+  "bug_summary": "Uses s[1:] (removes the first) instead of s[:-1] (removes the last).",
+  "entry_point": "remove_last_char"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "bug_03_type_conversion",
+  "title": "Sum of numeric strings concatenates instead of adding",
+  "category": "type conversion",
+  "difficulty": "medium",
+  "description": "sum_str_numbers(values) should convert each string to int and sum them.",
+  "bug_summary": "Adds the values as strings (no int()), causing a TypeError with an integer total.",
+  "entry_point": "sum_str_numbers"
+}
