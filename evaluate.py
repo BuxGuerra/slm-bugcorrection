@@ -25,7 +25,7 @@ RESULTS_DIR = ROOT / "results"
 
 def load_config(path: Path) -> dict:
     base = {
-        "model_host": "http://localhost:11434",
+        "model_host": "http://localhost:8080",
         "models": [],
         "n_samples": 1,
         "temperature": 0.0,
