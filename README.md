@@ -3,7 +3,7 @@
 Evaluation of **small language models (SLMs)** on bug identification and correction in Python.
 
 The repository currently contains the first two stages of the project: the bug **dataset** and the
-**evaluation harness** that runs models via Ollama.
+**evaluation harness** that runs models via llama.cpp.
 
 ## Structure
 
@@ -66,9 +66,9 @@ rm solution.py
 3. Make sure the tests **pass with `fix.py`** and **fail with `buggy.py`**.
 4. Run `python validate_dataset.py bug_NN_*` to validate.
 
-## Stage 2 — Evaluation with SLMs (Ollama)
+## Stage 2 — Evaluation with SLMs (llama.cpp)
 
-The harness in `eval/` runs models via [Ollama](https://ollama.com) (local) on two tasks:
+The harness in `eval/` runs models via [llama.cpp](https://llama-cpp.com/) (local) on two tasks:
 
 - **Identification** (binary classification): the model receives a piece of code and answers
   `CORRECT` or `BUG`. Evaluated over the 20 `buggy.py` (expected: buggy) + 20 `fix.py`
@@ -80,8 +80,7 @@ The harness in `eval/` runs models via [Ollama](https://ollama.com) (local) on t
 
 ```bash
 pip install -r requirements.txt
-ollama serve                       # server running
-ollama pull qwen2.5-coder:1.5b     # at least one small model
+llama-cli -m model-name.gguf    # server running with the models loaded
 ```
 
 ### Running
@@ -108,5 +107,5 @@ consolidated `results/report.csv` (one row per model).
 ### Harness tests
 
 ```bash
-python -m pytest eval/test_eval.py -q   # metric/extraction sanity checks (no Ollama)
+python -m pytest eval/test_eval.py -q   # metric/extraction sanity checks (no llama.cpp)
 ```

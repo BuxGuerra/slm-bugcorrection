@@ -8,13 +8,13 @@ from statistics import mean
 from .dataset import Bug
 from .extract import extract_code
 from .metrics import pass_at_k
-from .ollama_client import OllamaClient, OllamaError
+from .api_client import APIClient, APIError
 from .prompts import correction_prompt
 from .run_tests import run_candidate
 
 
 def run_correction(
-    client: OllamaClient,
+    client: APIClient,
     model: str,
     bugs: list[Bug],
     out_dir: Path,
@@ -36,7 +36,7 @@ def run_correction(
                 error = None
                 try:
                     response = client.generate(model, prompt, temperature, seed=seed)
-                except OllamaError as exc:
+                except APIError as exc:
                     response, error = "", str(exc)
                 code = extract_code(response) if response else ""
                 result = run_candidate(bug.path, code, timeout=test_timeout) if code else None

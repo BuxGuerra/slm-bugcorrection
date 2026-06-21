@@ -1,1 +1,1 @@
-"""Evaluation harness for SLMs (via Ollama) on bug identification and correction tasks."""
+"""Evaluation harness for SLMs (via llama.cpp) on bug identification and correction tasks."""

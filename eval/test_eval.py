@@ -1,4 +1,4 @@
-"""Sanity tests for the harness that do not depend on Ollama.
+"""Sanity tests for the harness that do not depend on llama.cpp.
 
 Run from the project root:  python -m pytest eval/test_eval.py -q
 """

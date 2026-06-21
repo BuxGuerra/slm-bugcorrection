@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Main CLI to evaluate SLMs (via Ollama) on bug identification and correction.
+"""Main CLI to evaluate SLMs (via llama.cpp) on bug identification and correction.
 
 Examples:
     python evaluate.py                                   # uses config.json
@@ -14,7 +14,7 @@ import json
 from pathlib import Path
 
 from eval.dataset import load_bugs
-from eval.ollama_client import OllamaClient, OllamaError
+from eval.api_client import APIClient, APIError
 from eval.run_correction import run_correction
 from eval.run_identification import run_identification
 
@@ -25,7 +25,7 @@ RESULTS_DIR = ROOT / "results"
 
 def load_config(path: Path) -> dict:
     base = {
-        "ollama_host": "http://localhost:11434",
+        "model_host": "http://localhost:11434",
         "models": [],
         "n_samples": 1,
         "temperature": 0.0,
@@ -38,7 +38,7 @@ def load_config(path: Path) -> dict:
 
 
 def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="Evaluate SLMs via Ollama on bug correction/identification.")
+    p = argparse.ArgumentParser(description="Evaluate SLMs via llama.cpp on bug correction/identification.")
     p.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     p.add_argument("--models", help="Comma-separated list of models (overrides the config).")
     p.add_argument("--bugs", help="Comma-separated folder patterns (e.g. 'bug_01_*,bug_2*').")
@@ -75,8 +75,8 @@ def main() -> int:
         return 2
 
     try:
-        client = OllamaClient(cfg["ollama_host"], request_timeout=cfg["request_timeout_seconds"])
-    except OllamaError as exc:
+        client = APIClient(cfg["model_host"], request_timeout=cfg["request_timeout_seconds"])
+    except APIError as exc:
         print(f"ERROR: {exc}")
         return 2
 
@@ -88,7 +88,7 @@ def main() -> int:
         print(f"=== {model} ===")
         try:
             client.ensure_model(model)
-        except OllamaError as exc:
+        except APIError as exc:
             print(f"  SKIPPING: {exc}\n")
             continue
 

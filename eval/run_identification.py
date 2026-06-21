@@ -7,12 +7,12 @@ from pathlib import Path
 from .dataset import Bug
 from .extract import extract_label
 from .metrics import classification_metrics
-from .ollama_client import OllamaClient, OllamaError
+from .api_client import APIClient, APIError
 from .prompts import identification_prompt
 
 
 def run_identification(
-    client: OllamaClient,
+    client: APIClient,
     model: str,
     bugs: list[Bug],
     out_dir: Path,
@@ -32,7 +32,7 @@ def run_identification(
                 error = None
                 try:
                     response = client.generate(model, prompt, temperature, seed=0)
-                except OllamaError as exc:
+                except APIError as exc:
                     response, error = "", str(exc)
                 predicted = extract_label(response) if response else "unknown"
                 pairs.append((expected, predicted))
