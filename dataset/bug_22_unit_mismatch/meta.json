@@ -1,0 +1,9 @@
+{
+  "id": "bug_22_unit_mismatch",
+  "title": "Helper returns the wrong unit",
+  "category": "unit conversion",
+  "difficulty": "medium",
+  "description": "total_seconds(events) takes a list of durations in minutes and returns the total in seconds.",
+  "bug_summary": "to_seconds(minutes) returns the value unchanged (forgot * 60), so the caller sums minutes while claiming seconds.",
+  "entry_point": "total_seconds"
+}

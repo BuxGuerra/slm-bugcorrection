@@ -1,0 +1,9 @@
+{
+  "id": "bug_25_wrong_dispatch",
+  "title": "Dispatch wired to the wrong handler",
+  "category": "wrong dispatch",
+  "difficulty": "medium",
+  "description": "area(shape, size) should compute the area of a 'circle' or a 'square' using the matching helper.",
+  "bug_summary": "The dispatch table maps 'square' to _circle_area, so squares are computed with the circle formula.",
+  "entry_point": "area"
+}

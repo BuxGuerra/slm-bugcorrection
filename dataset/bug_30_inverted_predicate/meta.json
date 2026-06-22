@@ -1,0 +1,9 @@
+{
+  "id": "bug_30_inverted_predicate",
+  "title": "Helper predicate is inverted",
+  "category": "inverted predicate",
+  "difficulty": "hard",
+  "description": "keep_valid(items) should keep only items that are not None and not negative.",
+  "bug_summary": "is_invalid uses 'x >= 0' instead of 'x < 0', inverting the check so the caller keeps invalid items and drops valid ones.",
+  "entry_point": "keep_valid"
+}

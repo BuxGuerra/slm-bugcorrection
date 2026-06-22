@@ -1,0 +1,9 @@
+{
+  "id": "bug_23_ignored_return",
+  "title": "Caller ignores the helper's return value",
+  "category": "ignored return value",
+  "difficulty": "medium",
+  "description": "clean_names(names) should return a new list with each name stripped and title-cased.",
+  "bug_summary": "The loop calls normalize(name) but discards its result and appends the original, unmodified name.",
+  "entry_point": "clean_names"
+}

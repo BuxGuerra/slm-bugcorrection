@@ -1,0 +1,9 @@
+{
+  "id": "bug_24_shared_mutation",
+  "title": "Helper mutates the caller's input",
+  "category": "shared mutation",
+  "difficulty": "hard",
+  "description": "running_totals(rows) should return new rows with each row's sum appended, without modifying the input.",
+  "bug_summary": "append_total calls row.append(...) on the received list, mutating the caller's original rows.",
+  "entry_point": "running_totals"
+}

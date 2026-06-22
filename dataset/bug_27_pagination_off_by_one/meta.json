@@ -1,0 +1,9 @@
+{
+  "id": "bug_27_pagination_off_by_one",
+  "title": "Off-by-one in the pagination bounds helper",
+  "category": "pagination off-by-one",
+  "difficulty": "hard",
+  "description": "paginate(items, page, size) should return the items on the given 1-based page.",
+  "bug_summary": "bounds() returns end = start + size - 1, but the caller uses it as a Python slice end, dropping the last item of each page.",
+  "entry_point": "paginate"
+}

@@ -23,8 +23,12 @@ config.json
 requirements.txt
 ```
 
-There are **20 bugs**, each a small self-contained function, covering a varied mix of categories
-(off-by-one, boolean logic, type conversion, recursion, floating point, swallowed exception, etc.).
+There are **30 bugs**. The first **20** (`bug_01`–`bug_20`) are small self-contained functions
+covering a varied mix of categories (off-by-one, boolean logic, type conversion, recursion,
+floating point, swallowed exception, etc.). The next **10** (`bug_21`–`bug_30`) are slightly more
+complex **inter-function bugs**: small multi-function modules where each function looks plausible
+but the *contract* between caller and callee is broken (wrong argument order, ignored return value,
+unit mismatch, shared mutation, wrong dispatch, persistent default state, etc.).
 
 ## The `solution.py` convention
 
@@ -47,7 +51,7 @@ This keeps `buggy.py`/`fix.py` stable and decouples the tests from the concrete 
 
 ```bash
 pip install -r requirements.txt
-python validate_dataset.py        # expect 20/20 for reference solutions and detected bugs
+python validate_dataset.py        # expect 30/30 for reference solutions and detected bugs
 ```
 
 Manual spot-check of one bug:

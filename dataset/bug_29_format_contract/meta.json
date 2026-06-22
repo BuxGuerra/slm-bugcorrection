@@ -1,0 +1,9 @@
+{
+  "id": "bug_29_format_contract",
+  "title": "Helper breaks the documented format contract",
+  "category": "name format contract",
+  "difficulty": "medium",
+  "description": "greet_all(people) should return 'Hello, First Last!' for each (first, last) tuple.",
+  "bug_summary": "format_name returns 'Last First' instead of the documented 'First Last', so every greeting is reversed.",
+  "entry_point": "greet_all"
+}

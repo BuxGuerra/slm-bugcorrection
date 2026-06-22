@@ -1,0 +1,9 @@
+{
+  "id": "bug_28_mutual_recursion",
+  "title": "Wrong base case in mutual recursion",
+  "category": "mutual recursion",
+  "difficulty": "hard",
+  "description": "is_even(n) decides parity by mutually recursing with is_odd(n).",
+  "bug_summary": "is_odd(0) returns True instead of False, so the parity chain is wrong for every n >= 1.",
+  "entry_point": "is_even"
+}

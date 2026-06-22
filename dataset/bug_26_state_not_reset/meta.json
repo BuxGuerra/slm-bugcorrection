@@ -1,0 +1,9 @@
+{
+  "id": "bug_26_state_not_reset",
+  "title": "Shared state leaks between calls",
+  "category": "persistent default state",
+  "difficulty": "hard",
+  "description": "dedupe(seq) should remove duplicates within a single call, independently each time it is called.",
+  "bug_summary": "The helper uses a mutable default seen=[] that persists across calls, so items seen in one call suppress them in the next.",
+  "entry_point": "dedupe"
+}

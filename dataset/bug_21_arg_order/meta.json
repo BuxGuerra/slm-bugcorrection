@@ -1,0 +1,9 @@
+{
+  "id": "bug_21_arg_order",
+  "title": "Helper called with arguments in the wrong order",
+  "category": "argument order",
+  "difficulty": "medium",
+  "description": "net_price(price, discount, tax) should apply the discount percent and then add the tax percent.",
+  "bug_summary": "The tax step calls apply_rate(tax, subtotal) instead of apply_rate(subtotal, tax), swapping amount and rate.",
+  "entry_point": "net_price"
+}
